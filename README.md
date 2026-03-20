@@ -85,16 +85,12 @@ sales-data-analysis
 │
 ├── data/
 │   └── sales_data.csv
-
 ├── sql/
 │   └── analysis_queries.sql
-
 ├── notebooks/
 │   └── sales_analysis.ipynb
-
 ├── visuals/
 │   └── exported charts
-
 ├── dashboard.py
 ├── create_database.py
 ├── sales.db

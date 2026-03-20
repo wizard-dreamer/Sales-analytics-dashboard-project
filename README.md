@@ -1,152 +1,159 @@
-# Sales Data Analytics using SQL & Python
+# 📊 Sales Analytics Dashboard
 
-## Overview
+An interactive sales analytics project built with **SQL, Python, and Streamlit** that explores retail sales performance and visualizes business insights.
 
-This project explores a simulated retail sales dataset and demonstrates a complete analytics workflow — from raw data ingestion to insight generation.
-
-The goal was to practice how analysts typically work with business data: clean the dataset, structure it in a database, run analytical SQL queries, and visualize trends that help explain business performance.
-
-The dataset includes the following fields:
-
-Order_ID, Order_Date, Product_Name, Category, Country, Sales, Profit, Quantity
+🔗 **Live Dashboard:**
+https://sales-analytics-dashboard-gaurav.streamlit.app/
 
 ---
 
-## Project Structure
+# Project Overview
 
-data/
-  sales_data.csv – raw dataset
+This project simulates a small retail business dataset and demonstrates a typical **data analytics workflow**:
 
-sql/
-  analysis_queries.sql – analytical SQL queries
+1. Raw CSV data ingestion
+2. Data cleaning and validation
+3. SQL database creation
+4. Analytical queries for business insights
+5. Visualization of trends
+6. Interactive dashboard for exploration
 
-notebooks/
-  sales_analysis.ipynb – exploration and visualization
-
-visuals/
-  exported charts generated during analysis
-
-create_database.py
-  script that cleans the data and builds the SQLite database
-
-README.md
-  project documentation
+The goal was to practice how analysts turn raw transactional data into **actionable insights and visual reports**.
 
 ---
 
-## Tools Used
+# Dataset
+
+The dataset represents retail order transactions with the following fields:
+
+Order_ID
+Order_Date
+Product_Name
+Category
+Country
+Sales
+Profit
+Quantity
+
+---
+
+# Key Questions Explored
+
+The analysis focuses on answering practical business questions:
+
+• Which products generate the most revenue?
+• How does revenue change over time?
+• Which countries contribute the most sales?
+• Which categories are most profitable?
+• How do sales compare with profit across product categories?
+
+---
+
+# Dashboard Features
+
+The Streamlit dashboard allows users to interactively explore the dataset.
+
+Features include:
+
+• Country and category filters
+• KPI cards for revenue, profit, and order count
+• Monthly revenue trend visualization
+• Top-performing products chart
+• Sales distribution by country
+• Profit comparison across product categories
+
+The dashboard enables quick exploration of performance across different dimensions of the data.
+
+---
+
+# Tech Stack
 
 Python
 Pandas
 SQLite
+SQL
 Matplotlib
 Seaborn
+Streamlit
 Jupyter Notebook
-SQL
 
 ---
 
-## Data Preparation
+# Project Structure
 
-Before performing analysis, the dataset is cleaned and validated using `create_database.py`.
+sales-data-analysis
+│
+├── data/
+│   └── sales_data.csv
 
-Key preparation steps include:
+├── sql/
+│   └── analysis_queries.sql
 
-• removing empty rows
-• validating required columns
-• converting numeric fields (Sales, Profit, Quantity)
-• removing duplicates
-• filtering unrealistic values (negative sales or zero quantities)
-• creating a helper summary table for quick aggregations
+├── notebooks/
+│   └── sales_analysis.ipynb
 
-This ensures the analysis is based on consistent and reliable data.
+├── visuals/
+│   └── exported charts
 
----
-
-## Analysis Performed
-
-The project answers several basic business questions:
-
-• Which products generate the most revenue?
-• How do sales and profits change over time?
-• Which countries contribute the most to total sales?
-• Which product categories are the most profitable?
-• How do category sales compare to profit margins?
-
-These questions are explored using SQL queries and Python-based visualizations.
+├── dashboard.py
+├── create_database.py
+├── sales.db
+└── README.md
 
 ---
 
-## Visualizations
+# Running the Project Locally
 
-The notebook generates and exports several charts, including:
+Clone the repository:
 
-• Top selling products
-• Monthly revenue and profit trends
-• Sales distribution by country
-• Profit by product category
-• Category sales vs profit relationship
-• Monthly sales trends across categories
+git clone https://github.com/wizard-dreamer/Sales-analytics-dashboard-project.git
 
-All generated charts are saved in the `visuals/` folder.
-
----
-
-## Key Observations
-
-Some interesting patterns visible in the dataset:
-
-• A small number of products contribute disproportionately to revenue
-• Sales fluctuate month-to-month, suggesting possible seasonal demand
-• Certain countries generate strong revenue but lower profit margins
-• Some categories show high sales but relatively weaker profitability
-
-These types of insights help businesses decide where to focus growth or optimization efforts.
-
----
-
-## Running the Project
-
-Create a virtual environment (recommended):
+Create a virtual environment:
 
 python -m venv .venv
 .venv\Scripts\activate
 
-Install required packages:
+Install dependencies:
 
-pip install pandas matplotlib seaborn jupyter
+pip install -r requirements.txt
 
-Generate the SQLite database:
+Run the dashboard:
 
-python create_database.py
-
-Launch the notebook:
-
-cd notebooks
-jupyter notebook sales_analysis.ipynb
-
-Run the notebook cells to reproduce the analysis and charts.
+streamlit run dashboard.py
 
 ---
 
-## Possible Improvements
+# Key Insights
 
-Some future extensions for this project:
+Some patterns visible from the analysis:
 
-• build an interactive dashboard using Streamlit
-• expand the dataset to simulate larger sales volumes
-• include forecasting for future revenue trends
-• add KPI dashboards for business reporting
+• A small number of products generate the majority of revenue
+• Sales vary across months, suggesting potential seasonal patterns
+• Certain countries contribute high sales but lower profit margins
+• Some categories have strong revenue but weaker profitability
+
+These insights demonstrate how sales data can help guide **pricing strategies, marketing campaigns, and product prioritization**.
 
 ---
 
-## Purpose of the Project
+# Future Improvements
 
-This project was built as a practice exercise to strengthen core data analytics skills including:
+Possible extensions for the project:
+
+• Add forecasting for revenue trends
+• Expand dataset size for more realistic analysis
+• Integrate interactive charts with Plotly
+• Build a KPI-focused business dashboard layout
+
+---
+
+# Author
+
+**Gaurav Singh**
+
+Built as part of a personal data analytics learning project to practice:
 
 SQL querying
-data cleaning
+data analysis with Python
 data visualization
-business insight extraction
-
-It represents a small but complete analytics workflow that could be extended into a full dashboard or reporting system.
+dashboard development
